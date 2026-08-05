@@ -38,14 +38,6 @@ Homelab designed as a small, production-like environment. It lets me dive deep i
 | Media storage | None yet              |
 | Hypervisor    | Proxmox VE            |
 
-Planned role:
-
-- Virtual machines and test environments.
-- Windows Server and Active Directory.
-- Proxmox LXC containers.
-- Heavier services
-- Media storage
-
 ### Raspberry Pi 5
 | Component      | What?       |
 | --------- | ----------- |
@@ -54,7 +46,6 @@ Planned role:
 | Network   | Ethernet    |
 | Power     | PoE         |
 
-The Raspberry Pi 5 is the heart of the homelab used for the Docker services
 
 ### Network
 | Purpose      | What?       |
