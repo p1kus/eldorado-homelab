@@ -16,7 +16,6 @@ Homelab designed as a small, production-like environment. this helped me dive de
 
 ### HP Mini, Proxmox
 
-| Component     | Value                 |
 | ------------- | --------------------- |
 | CPU           | Intel Core i5-9400T   |
 | RAM           | 16 GB DDR4            |
@@ -28,13 +27,12 @@ Planned role:
 
 - Virtual machines and test environments.
 - Windows Server and Active Directory.
-- A dedicated Docker VM.
-- Services requiring more resources than the Raspberry Pi can provide.
+- Proxmox LXC containers.
+- Heavier services
 - Media storage
 
 ### Raspberry Pi 5
 
-| Component | Value       |
 | --------- | ----------- |
 | Role      | Docker host |
 | Storage   | 256 GB NVMe |
@@ -45,7 +43,6 @@ The Raspberry Pi 5 is the heart of the homelab used for the Docker services
 
 ### Network
 
-| Function | Solution                              |
 | -------- | ------------------------------------- |
 | Router   | MikroTik hAP ax²                      |
 | Switch   | TP-LINK SG108P PoE switch             |
