@@ -1,8 +1,6 @@
 # Eldorado
 
-> Home infrastructure for learning System Administration, DevOps, Networking and Automation.
-
-Homelab designed as a small, production-like environment. My main goal while creating the system was learning Windows Server administration, virtualization, containerization, monitoring, networking, automation and identity management.
+Homelab designed as a small, production-like environment. this helped me dive deep into Windows Server administration, virtualization, containerization, monitoring, networking, automation and identity management.
 
 ## Goals
 
@@ -16,7 +14,7 @@ Homelab designed as a small, production-like environment. My main goal while cre
 
 ## Hardware
 
-### HP Mini — Proxmox
+### HP Mini, Proxmox
 
 | Component     | Value                 |
 | ------------- | --------------------- |
@@ -44,15 +42,6 @@ Planned role:
 | Power     | PoE         |
 
 The Raspberry Pi 5 is the current host for the Docker services defined in this repository.
-
-### Raspberry Pi Zero 2 W
-
-Planned roles:
-
-- Secondary Pi-hole.
-- DNS redundancy.
-- Small status display.
-- Emergency network services.
 
 ### Network
 
