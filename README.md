@@ -1,15 +1,25 @@
-# Eldorado
-
-<img width="125" height="75" alt="image" src="https://github.com/user-attachments/assets/3f61552f-1c86-484a-a981-7e67ed8d20a2" />
-<img width="125" height="75" alt="image" src="https://github.com/user-attachments/assets/d8cefaa9-cc69-4486-8aa6-cc60d5eb30aa" />
+# Eldorado <img width="1369" height="770" alt="image" src="https://github.com/user-attachments/assets/98bb9fd6-12de-4559-ac1f-aa9e6fe2f98f" />
 
 
-Homelab designed as a small, production-like environment. this helped me dive deep into Windows Server administration, virtualization, containerization, monitoring, networking, automation and identity management.
+
+
+
+Homelab designed as a small, production-like environment. It lets me dive deep into Windows Server administration, virtualization, containerization, monitoring, networking, automation and identity management.
+
+## Todo
+- [ ] Deploy Authentik and configure SSO auth on hosted apps
+- [ ] Deploy and configure Jellyfin
+- [ ] Learn Ansible & Ansible Playbooks
+- [ ] Create .txt file at ~/ synced across root machines containing useful info about the systems 
+- [ ] Implement automated backups and test the restore process.
+- [ ] Create separate VLANs for servers, IoT devices and guests.
+- [ ] Dive deep into MikroTik routing & firewall
+- [ ] Replace `latest` tags with pinned image versions.
 
 ## Goals
 
-- Learn technologies used in enterprise environments.
-- Build reproducible and well-documented infrastructure.
+- Learn AD administration,
+- Build reproducible and documented infrastructure.
 - Centralize authentication and implement SSO.
 - Monitor services, hosts and network devices.
 - Automate deployments and maintenance.
@@ -101,6 +111,12 @@ Planned purpose:
 
 ## Docker Services
 
+<img width="1027" height="428" alt="image" src="https://github.com/user-attachments/assets/d914d037-d2e1-4631-b5bc-8b7d61022875" />
+<img width="1631" height="477" alt="image" src="https://github.com/user-attachments/assets/c6599bf8-4bea-4486-9d3e-ba171705772c" />
+
+
+
+
 ### Currently defined
 
 | Area          | Stack               | Containers                               |
@@ -178,28 +194,19 @@ Ports for services that do not use host networking can be changed in their respe
 Backups should include at least:
 
 - Named volumes `dockhand_data`, `prometheus_data`, `grafana_data`, `n8n_storage` and `cronitor_data`.
-- `stacks/rustdesk/data/`.
-- `stacks/pihole/etc-pihole/`.
-- `stacks/nginx-proxy-manager/data/`.
-- `stacks/nginx-proxy-manager/letsencrypt/`.
-- `stacks/crontab-guru/crontabs/`.
+- `rustdesk/data/`.
+- `pihole/etc-pihole/`.
+- `nginx-proxy-manager/data/`.
+- `nginx-proxy-manager/letsencrypt/`.
+- `crontab-guru/crontabs/`.
 - All local `.env` files stored in a secure secret store.
 
-Persistent data directories, local databases, certificates, private keys and `.env` files are ignored by Git.
 
 ## Security
 
 - Dockhand has access to `/var/run/docker.sock`, HAS to be behind auth
-- Set `N8N_SECURE_COOKIE=true` after exposing n8n to the internet
+- Set `N8N_SECURE_COOKIE=true` when exposing n8n to the internet
 - Pi-hole listens on all interfaces. Restrict access to its DNS port on it's firewall.
 - The images currently use the `latest` tag. Pinning specific versions will make future updates more predictable.
-
-## Roadmap
-- [ ] Deploy Authentik and configure Authentik
-- [ ] Deploy Termix for managing SSH connections
-- [ ] Deploy and configure Jellyfin
-- [ ] Implement automated backups and test the restore process.
-- [ ] Create separate VLANs for servers, IoT devices and guests.
-- [ ] Replace `latest` tags with pinned image versions.
 
 
