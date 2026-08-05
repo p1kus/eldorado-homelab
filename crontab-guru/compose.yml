@@ -1,0 +1,19 @@
+name: crontab-guru
+
+services:
+  crontab-guru:
+    build:
+      context: .
+    container_name: crontab-guru-dashboard
+    ports:
+      - "${CRONTAB_GURU_PORT:-9000}:9000"
+    environment:
+      DASHBOARD_USERNAME: "${DASHBOARD_USERNAME:?Ustaw DASHBOARD_USERNAME w stacks/crontab-guru/.env}"
+      DASHBOARD_PASSWORD: "${DASHBOARD_PASSWORD:?Ustaw DASHBOARD_PASSWORD w stacks/crontab-guru/.env}"
+    volumes:
+      - cronitor_data:/root/.config/cronitor
+      - ./crontabs:/var/spool/cron/crontabs
+    restart: unless-stopped
+
+volumes:
+  cronitor_data:

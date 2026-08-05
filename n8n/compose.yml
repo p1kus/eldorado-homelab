@@ -1,0 +1,19 @@
+name: n8n
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    ports:
+      - "${N8N_PORT:-5678}:5678"
+    environment:
+      GENERIC_TIMEZONE: "${TZ:-Europe/Warsaw}"
+      TZ: "${TZ:-Europe/Warsaw}"
+      N8N_SECURE_COOKIE: "${N8N_SECURE_COOKIE:-false}"
+      N8N_ENCRYPTION_KEY: "${N8N_ENCRYPTION_KEY:?Ustaw N8N_ENCRYPTION_KEY w stacks/n8n/.env}"
+    volumes:
+      - n8n_storage:/home/node/.n8n
+    restart: unless-stopped
+
+volumes:
+  n8n_storage:

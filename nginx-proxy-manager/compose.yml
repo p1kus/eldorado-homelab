@@ -1,0 +1,16 @@
+name: nginx-proxy-manager
+
+services:
+  npm:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: npm
+    restart: unless-stopped
+    ports:
+      - "${NPM_HTTP_PORT:-80}:80"
+      - "${NPM_HTTPS_PORT:-443}:443"
+      - "${NPM_ADMIN_PORT:-81}:81"
+    environment:
+      TZ: "${TZ:-Europe/Warsaw}"
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
