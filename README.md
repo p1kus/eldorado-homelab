@@ -1,5 +1,8 @@
 # Eldorado
 
+<img width="250" height="150" alt="image" src="https://github.com/user-attachments/assets/3f61552f-1c86-484a-a981-7e67ed8d20a2" />
+
+
 Homelab designed as a small, production-like environment. this helped me dive deep into Windows Server administration, virtualization, containerization, monitoring, networking, automation and identity management.
 
 ## Goals
