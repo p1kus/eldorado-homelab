@@ -30,7 +30,7 @@ Homelab designed as a small, production-like environment. It lets me dive deep i
 
 ### HP Mini, Proxmox
 
-| Component      | What?       |
+| -      | -       |
 | ------------- | --------------------- |
 | CPU           | Intel Core i5-9400T   |
 | RAM           | 16 GB DDR4            |
@@ -39,7 +39,7 @@ Homelab designed as a small, production-like environment. It lets me dive deep i
 | Hypervisor    | Proxmox VE            |
 
 ### Raspberry Pi 5
-| Component      | What?       |
+| -      | -       |
 | --------- | ----------- |
 | Role      | Docker host |
 | Storage   | 256 GB NVMe |
@@ -48,7 +48,7 @@ Homelab designed as a small, production-like environment. It lets me dive deep i
 
 
 ### Network
-| Purpose      | What?       |
+| -      | -       |
 | -------- | ------------------------------------- |
 | Router   | MikroTik hAP ax²                      |
 | Switch   | TP-LINK SG108P PoE switch             |
