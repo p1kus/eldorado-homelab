@@ -55,27 +55,6 @@ Homelab designed as a small, production-like environment. It lets me dive deep i
 | DNS      | Primary Pi-hole and secondary Pi-hole |
 | VPN      | WireGuard                             |
 
-## Architecture
-
-```text
-Internet
-    │
-WireGuard
-    │
-MikroTik hAP ax²
-    │
-    ├── HP Mini
-    │   └── Proxmox VE
-    │       ├── Docker VM
-    │       ├── Windows Server
-    |       ├── Pi-Hole DNS (Secondary to RPI5 Pi-Hole)
-    │       └── Test Linux VMs
-    |
-    │
-    └── Raspberry Pi 5
-        └── Docker Engine
-
-```
 
 ## Virtual Machines
 
@@ -83,22 +62,21 @@ MikroTik hAP ax²
 
 Planned purpose:
 
-- SSO.
-- Services requiring more resources than the Raspberry Pi can provide.
+- SSO
+- Services requiring more resources than the Raspberry Pi can provide
 
 ### Windows Server
 
 Planned purpose:
 
-- Active Directory.
-- DNS and lab DHCP.
-- Group Policy.
-- Windows environment administration.
+- Active Directory
+- DNS and lab DHCP
+- Windows environment administration lab
 
 ### Future VMs
 
-- Ubuntu Server.
-- Temporary test environments.
+- Ubuntu Server
+- Temporary test environments
 
 ## Docker Services
 
@@ -120,12 +98,6 @@ Planned purpose:
 | Automation    | n8n                 | `n8n`                                    |
 | Tools         | Omni Tools          | `omni-tools`                             |
 | Scheduling    | Crontab Guru        | `crontab-guru-dashboard`                 |
-
-### Planned
-
-- Authentik — SSO, OIDC and MFA.
-
-The Crontab Guru stack requires the existing `Dockerfile` and application files under `stacks/crontab-guru/`. They were not included in the original configuration and therefore cannot be recreated by this repository.
 
 
 ## Daily Operations
