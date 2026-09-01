@@ -152,9 +152,9 @@ docker compose down
 
 Ports for services that do not use host networking can be changed in their respective `.env` files.
 
-## Data and Backups
+## Backups
 
-Backups should include at least:
+Backups should include:
 
 - Named volumes `dockhand_data`, `prometheus_data`, `grafana_data`, `n8n_storage` and `cronitor_data`.
 - `rustdesk/data/`.
@@ -165,7 +165,7 @@ Backups should include at least:
 - All local `.env` files stored in a secure secret store.
 
 
-## Security
+## more
 
 - Dockhand has access to `/var/run/docker.sock`, HAS to be behind auth
 - Set `N8N_SECURE_COOKIE=true` when exposing n8n to the internet
