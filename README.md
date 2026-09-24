@@ -8,11 +8,12 @@ Homelab designed as a small, production-like environment. It lets me dive deep i
 
 ## Todo
 - [ ] Deploy Authentik and configure SSO auth on hosted apps
-- [ ] Deploy and configure Jellyfin
+- [x] Deploy and configure Jellyfin
 - [ ] Learn Ansible & Ansible Playbooks
 - [ ] Create .txt file at ~/ synced across root machines containing useful info about the systems 
 - [ ] Implement automated backups and test the restore process.
-- [ ] Create separate VLANs for servers, IoT devices and guests.
+- [ ] servers VLAN
+- [x] IoT devices VLAN.
 - [ ] Dive deep into MikroTik routing & firewall
 - [ ] Replace `latest` tags with pinned image versions.
 
