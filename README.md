@@ -19,7 +19,7 @@ Homelab designed as a small, production-like environment. It lets me dive deep i
 
 ## Goals
 
-- Learn AD administration,
+- AD administration,
 - Build reproducible and documented infrastructure.
 - Centralize authentication and implement SSO.
 - Monitor services, hosts and network devices.
